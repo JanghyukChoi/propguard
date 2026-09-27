@@ -80,6 +80,17 @@ It never opens positions and never touches API-key settings.
 pip install pytest && python -m pytest -q
 ```
 
+## Support the project
+
+`propguard` is free and MIT-licensed. If you are about to buy a Crypto Fund Trader
+challenge anyway, using this link supports development at no extra cost to you, and the
+coupon **`platinum5`** gives you **5 % off**:
+
+**https://cryptofundtrader.com?_by=dk4xtp**
+
+*Disclosure: this is an affiliate link — the maintainer receives a commission if you
+purchase through it. The tool works the same whether or not you use it.*
+
 ## License
 
 MIT. Not financial advice. Not affiliated with any prop firm or exchange.
