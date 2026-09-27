@@ -39,6 +39,8 @@ Optional Telegram alerts: set `PROPGUARD_TG_TOKEN` and `PROPGUARD_TG_CHAT`.
 | `cft-2phase` | 5 % | 10 % | static |
 | `cft-2phase-addons` | 6 % | 12 % | static |
 | `hyrotrader` | 4 % | 6 % | static |
+| `mubite-2step` | 5 % | 8 % | static |
+| `mubite-2step-addon` | 5 % | 10 % | static |
 | `generic` | 5 % | 10 % | static |
 
 ⚠ **Presets are examples compiled from public pages. Rules change and add-ons change the
@@ -48,6 +50,21 @@ Override anything: `--buffer 0.01`, `--reset-hour 0`.
 Daily loss is measured from the larger of balance and equity at the reset by default
 (conservative). If you start the guard mid-day without a state file, pass
 `--day-start-equity` — otherwise today's losses are invisible to it.
+
+## Firm rules on self-hosted risk scripts
+
+We asked support at each firm (September 2026) whether a **self-hosted** script that only
+reads equity and cancels orders / closes positions with reduce-only orders is allowed.
+Summary of the answers we received — **rules change, confirm with your firm**:
+
+| Firm | Answer | Conditions mentioned |
+|---|---|---|
+| Crypto Fund Trader | Allowed when used for risk management / avoiding violations | — |
+| HyroTrader | Allowed in challenge and funded phases | must not open trades · no copy trading or external signals · **third-party apps not supported during the challenge — your own self-hosted script is fine** |
+| Mubite | No restriction stated | **never delete or change the API key** · usual challenge rules apply |
+
+This is why `propguard` is **self-hosted only**: you run it yourself with your own key.
+It never opens positions and never touches API-key settings.
 
 ## Safety
 

@@ -21,6 +21,9 @@ PRESETS = {
     "cft-2phase-addons": dict(daily_loss_pct=0.06, max_loss_pct=0.12, max_loss_mode="static", daily_ref="max"),
     # HyroTrader (public reviews: 4 % daily, 6 % max)
     "hyrotrader":        dict(daily_loss_pct=0.04, max_loss_pct=0.06, max_loss_mode="static", daily_ref="max"),
+    # Mubite 2-Step with the "Extra 2% Drawdown Room" add-on (base plan: 8 % max)
+    "mubite-2step-addon": dict(daily_loss_pct=0.05, max_loss_pct=0.10, max_loss_mode="static", daily_ref="max"),
+    "mubite-2step":       dict(daily_loss_pct=0.05, max_loss_pct=0.08, max_loss_mode="static", daily_ref="max"),
     # Generic conservative template
     "generic":           dict(daily_loss_pct=0.05, max_loss_pct=0.10, max_loss_mode="static", daily_ref="max"),
 }
